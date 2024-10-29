@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll It</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="intro" style="display: block;">
+        <img src="C:\Users\samki\OneDrive\Documents\download.png" alt="Roll It Logo" class="logo">
+        <h1 class="title">Roll It</h1>
+        <p>The Roll It game is a simple dice game where players take turns rolling a die. The goal is to be the first player to reach 50 points.</p>
+        <h2>How to Play:</h2>
+        <ul>
+            <li>On your turn, you can roll the die as many times as you want.</li>
+            <li>If you roll a 1, you lose all points for that turn and your total score resets to zero.</li>
+            <li>If you roll any other number, you can choose to either roll again or hold your score.</li>
+            <li>If you hold, your current score is added to your total score.</li>
+            <li>The first player to reach 50 points wins!</li>
+        </ul>
+        <button id="start-game-btn">Start Game</button>
+    </div>
+
+    <div id="game-container" style="display: none;">
+        <h1>Roll It</h1>
+        <button id="back-btn">Back</button>
+        <div id="player-setup">
+            <input type="number" id="player-count" min="2" max="4" value="2">
+            <button id="start-game">Start Game</button>
+        </div>
+        <div id="game-board" style="display: none;">
+            <div id="players-container"></div>
+            <div id="dice-container">
+                <div id="dice"></div>
+                <div id="dice-result"></div>
+            </div>
+            <div id="actions">
+                <button id="roll">Roll</button>
+                <button id="hold">Hold</button>
+            </div>
+        </div>
+        <div id="winner" style="display: none;">
+            <p></p>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
